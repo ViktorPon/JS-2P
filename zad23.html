@@ -21,9 +21,38 @@ function alfa_pon(d,drabina)
     pokaz2.innerHTML="alfa="+alfa.toFixed(2)+" stopni"+"<br>"; 
 }
        </script> 
+       <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-size: 15px;
+        }
+    input{
+        padding-left:5%;
+        
+    }
+    #pokaz1{
+        font-family: monospace;
+        font-size:26px;
+         animation-name: test;
+        animation-duration: 4s;
+    }
+     #pokaz2{
+        font-family: monospace;
+        font-size:26px;
+        animation-name: test;
+        animation-duration: 8s;
+    }
+    @keyframes test {
+  0%   {color: red;font-size: 12px;}
+  25%  {color: yellow;font-size: 15x;}
+  50%  {color: blue;font-size: 18px;}
+  100% {color: green;font-size: 21px;}
+}
+       </style>
 </head>  
 <body>  
- Pobliczanie drabiny i kąta
+ Pobliczanie P i obw prostokąta
 <br> <br> 
 <form name="formularz" onsubmit="drabina_ponomarenko(this.d.value,this.x.value); 
 alfa_pon(this.d.value,this.drabina.value);return false">   
@@ -34,14 +63,14 @@ alfa_pon(this.d.value,this.drabina.value);return false">
                        <br>   <br> 
          <input  TYPE="submit"  Value="oblicz" > 
                        <br>   <br> 
-       Drabina= 
+       P= 
            <input  size="6"  name="drabina"> 
-       Alfa= 
+       obw= 
           <input  size="6"  name="alfa"> 
 </form> 
 <table> 
               <tr id="pokaz1"></tr> 
               <tr id="pokaz2"></tr> 
-</table> 
+</table>
 </body>  
 </html> 
