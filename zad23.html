@@ -1,36 +1,32 @@
-
 <html>  
 <head>  
 <title> 
-Przykład obliczenia V  i  Pc walca 
+Przykład obliczenia P i obwodu prostokąta 
 </title> 
-<script language="JavaScript">
-    function Pitagor(d,x) 
-{ 
-    d_liczba=parseFloat(d) 
-    x_liczba=parseFloat(x) 
-   drabina_wynik=math.sqrt(d_liczba*d_liczba+x_liczba*x_liczba) 
-   document.getElementsByName('drabina')[0].value=drabina_wynik.toFixed(2); 
-   pokaz2.innerHTML="drabina="+drabina_wynik.toFixed(2)+"cm^2"; 
-} 
-function sin(alfa,d,drabina_wynik) 
-{ 
-d_liczba=parseFloat(d) 
-drabina_liczba=parseFloat(drabina_wynik) ;
-alfa_liczba=parseFloat(alfa);
-alfa_wynik=math.asin(d/drabina_wynik)*180/Math.PI;
-document.getElementsByName('alfa')[0].value=alfa_wynik.toFixed(2);   /* na dokument  */                                                  
-pokaz1.innerHTML="Alfa="+alfa_wynik.toFixed(2)+"<br>";        
-/*do okna Alert */ 
-/* do tabeli */
-} 
+<script language="JavaScript"> 
+function drabina_ponomarenko(d,x)
+{
+    d_liczba=parseFloat(d)
+    x_liczba=parseFloat(x)
+    drabina=math.sqrt(d_liczba*d_liczba+x_liczba*x_liczba);
+    document.getElementsByName('drabina')[0].value=drabina.toFixed(2);   /* na dokument  */
+    pokaz1.innerHTML="drabina="+drabina.toFixed(2)+" cm"+"<br>"; 
+}
+function alfa_pon(d,drabina)
+{
+    d_liczba=parseFloat(d)
+    drabina_liczba=parseFloat(drabina)
+    alfa=Math.asin(d_liczba/drabina_liczba)*180/Math.PI;
+    document.getElementsByName('alfa')[0].value=alfa.toFixed(2);   /* na dokument  */
+    pokaz2.innerHTML="alfa="+alfa.toFixed(2)+" stopni"+"<br>"; 
+}
        </script> 
 </head>  
 <body>  
- Pobliczanie odleglosci drabiny od sciany i kata
+ Pobliczanie P i obw prostokąta
 <br> <br> 
-<form name="formularz" action="..." onsubmit="sin(this.alfa.value,this.d.value,this.drabina.value); 
-pitagor(this.d.value,this.x.value);return false">   
+<form name="formularz" action="..." onsubmit="drabina_ponomarenko(this.d.value,this.x.value); 
+alfa_pon(this.d.value,this.drabina.value);return false">   
      Podaj d= 
         <input  size="6"  name="d"> 
      Podaj x= 
@@ -38,10 +34,10 @@ pitagor(this.d.value,this.x.value);return false">
                        <br>   <br> 
          <input  TYPE="submit"  Value="oblicz" > 
                        <br>   <br> 
-       Alfa= 
-           <input  size="6"  name="alfa"> 
-       drabina= 
-          <input  size="6"  name="drabina"> 
+       P= 
+           <input  size="6"  name="drabina"> 
+       obw= 
+          <input  size="6"  name="alfa"> 
 </form> 
 <table> 
               <tr id="pokaz1"></tr> 
@@ -49,5 +45,3 @@ pitagor(this.d.value,this.x.value);return false">
 </table> 
 </body>  
 </html> 
-
-
