@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title size="2xl">Zadanie 32 – Nazwisko ucznia np. Kowalski</title> 
+  </head> 
+<body bgcolor="silver"> 
+  <div style="color:navy;font-size:50px;"> 
+   <script type="text/javascript"> 
+              function samochod(model,marka,kolor)   //początek konstruktora 
+  { 
+   this.model=model; 
+   this.marka=marka; 
+   this.kolor=kolor;   
+  }                                         //koniec konstruktora 
+              samochod.prototype.wypisz = function () //definicja metody 
+      { 
+         alert(this.model + " " + this.marka+ " " + this.kolor); 
+      }; 
+  var auto1 = new samochod("Passat", "Volkswagen 1.9 TDI", "szary"); // nowy obiekt osoba1 
+  var auto2 = new samochod("Civic", "Honda 1.6 TSI ", "czerwony"); // nowy obiekt osoba2 
+ 
+  auto1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby1 z użyciem alert(); 
+  auto2.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby2 z użyciem alert(); 
+                document.write("Moje nazwisko to Ponomarenko  mam numer 16 a obiekt to klient"+"<br>"); 
+                document.write("dostęp do pól osoba1 i  osoba2"+"<br>"); 
+// poniżej dostęp/wypisanie danych  do pól osoby1 i  osoba2 
+ document.write("auto pierwsze =>"+"   "+auto1.model+"   "+auto1.marka+"   "+auto1.kolor+"<br>"); 
+ document.write("auto drugie =>"+"   "+auto2.model+"   "+auto2.marka+"   "+auto2.kolor+"<br>"); 
+ 
+   </script> 
+ </div> 
+ <div style="color:red;font-size:30px;"><br>    
+programowanie obiektowe: 
+Słowo kluczowe prototype stosowane jest do:<br> 
+.. tworzenia metod i pól, które są współdzielone przez wszystkie obiekty utworzone z tego samego konstruktora <br> 
+Słowo kluczowe new stosowane jest do:<br> 
+.. tworzenia nowych obiektów na podstawie konstruktora <br> 
+</div> 
+</body> 
+</html>
